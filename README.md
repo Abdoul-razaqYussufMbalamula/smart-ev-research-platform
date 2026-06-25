@@ -101,9 +101,9 @@ graph TD
 | Continuous battery current demand | ~97A | Calculated: 7000W ÷ 72V |
 | Peak battery current | ~250A | Engineering estimate |
 
-> ![QS Motor Label](motor_label.jpg)
-> ![Motor Hall Connector](motor_hall_connector2.jpg)
-> ![Motor Hall Connector Color Codes](motor_hall_connector1.jpg)
+> ![QS Motor Label](motor_label.jpeg)
+> ![Motor Hall Connector](motor_hall_connector2.jpeg)
+> ![Motor Hall Connector Color Codes](motor_hall_connector1.jpeg)
 > ```
 
 ### Motor Controller (In Procurement)
@@ -165,7 +165,7 @@ The initial specification targeted the Fardriver ND72850 as the motor controller
 
 Winding continuity testing with a standard multimeter showed low, roughly equal resistance across all three phase pairs — but the readings were too low to be reliable, because the measurement included the test lead resistance (~0.4Ω each side).
 
-- **Root cause:** A standard multimeter's minimum resolution is typically 0.1–1Ω, which is comparable to or larger than the actual phase resistance of a large hub motor. Lead resistance correction is required but brings the corrected result below the meter's useful resolution.
+- **Root cause:** A standard multimeter's minimum resolution is typically 0.1–1Ω, which is comparable to or larger than the actual phase resistance of a large hub motor. Lead resistance correction is required, but it brings the corrected result below the meter's useful resolution.
 - **Status:** Precise winding resistance measurement requires a milliohm meter. This test is logged as an open item — it does not block controller procurement, but is required for complete motor characterisation before final commissioning.
 
 **3. Hall sensor wiring verification — Arduino-based live signal test**
@@ -214,11 +214,10 @@ The Hall sensor test code is a representative example: the Arduino sketch itself
 - No stuck signals, floating pins, or dead sensors detected on either unit
 - `INPUT_PULLUP` used deliberately — QS Motor Hall outputs are open-collector, requiring a pull-up to read cleanly; without it, floating inputs would produce false readings that could be mistaken for sensor failures
 
-> 📁 **Add test setup photos here:**
-> ```markdown
-> ![Hall Sensor Test Setup](assets/hall_test_arduino.jpg)
-> ![Serial Monitor Output](assets/hall_serial_output.jpg)
-> ```
+Test Setup Photos:
+
+> ![Hall Sensor Test Setup](hall_test_wiring.jpeg)
+> ![Serial Monitor Output](hall_test_signal_graph.jpeg)
 
 ---
 
@@ -283,4 +282,4 @@ The Hall sensor test code is a representative example: the Arduino sketch itself
 **Supervisor:** Professor, VGTU Automotive Engineering Laboratory
 **Platform:** First-generation Smart Fortwo MC01 — VIN WME01MC01YHO05839
 
-This project is supervised academic research. All procurement, high-voltage design, and powered testing decisions are subject to professor review and sign-off before implementation.
+This project is supervised by academic research. All procurement, high-voltage design, and powered testing decisions are subject to professor review and sign-off before implementation.
