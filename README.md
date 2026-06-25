@@ -101,9 +101,12 @@ graph TD
 | Continuous battery current demand | ~97A | Calculated: 7000W ÷ 72V |
 | Peak battery current | ~250A | Engineering estimate |
 
-> ![QS Motor Label](motor_label.jpeg)
-> ![Motor Hall Connector](motor_hall_connector2.jpeg)
-> ![Motor Hall Connector Color Codes](motor_hall_connector1.jpeg)
+>![Platform Full View](vehicle_front_view.jpeg)
+>![Platform Full View](vehicle_side_view.jpeg)
+>![Platform Full View](vehicle_rear_view.jpeg)
+>![QS Motor Label](motor_label.jpeg)
+> ![Motor Hall Connector](hall_connector2.jpeg)
+> ![Motor Hall Connector Color Codes](hall_connector1.jpeg)
 > ```
 
 ### Motor Controller (In Procurement)
